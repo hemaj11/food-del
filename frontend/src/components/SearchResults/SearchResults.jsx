@@ -4,7 +4,7 @@ import { StoreContext } from "../../context/StoreContext";
 import "./SearchResults.css";
 
 const SearchResults = () => {
-  const { food_list, cartItems, addToCart, removeFromCart, loadCartData, token } = useContext(StoreContext);
+  const { food_list, cartItems, addToCart, removeFromCart, loadCartData, token, url } = useContext(StoreContext);
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState("");
   const location = useLocation();
@@ -48,7 +48,7 @@ const SearchResults = () => {
                   src={
                     item.image.startsWith("http")
                       ? item.image
-                      : `http://localhost:4000/images/${item.image}`
+                      : `${import.meta.env.VITE_API_URL}/images/${item.image}`
                   }
                   alt={item.name}
                   className="search-result-img"
