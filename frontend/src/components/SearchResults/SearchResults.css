@@ -1,0 +1,131 @@
+.search-results-container {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive list: full width on mobile, max 800px on desktop */
+.search-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 1.5rem;
+  width: 95%;
+  max-width: 800px;
+}
+
+/* Responsive card: fills parent width, adapts on small screens */
+.search-result-card {
+  display: flex;
+  align-items: flex-start;
+  border: 2px solid #ff6f47;
+  border-radius: 8px;
+  padding: 18px 24px;
+  background: #fff;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+    transition: box-shadow 0.2s;
+}
+
+.search-result-card:hover {
+  box-shadow: 0 2px 12px rgba(255, 111, 71, 0.08);
+}
+
+.search-result-img-box {
+  width: 56px;
+  height: 56px;
+  background: #fff4f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.search-result-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.search-result-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.search-result-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 2px;
+}
+
+.search-result-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.search-result-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.search-result-price {
+  font-size: 16px;
+  color: #ff6f47;
+  font-weight: 500;
+}
+
+.search-result-cart-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-result-cart-btns button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ff6f47;
+  background: #fff4f2;
+  color: #ff6f47;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-result-cart-btns button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.search-result-cart-btns span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .search-results-list {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 4px;
+  }
+  .search-result-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 8px;
+  }
+  .search-result-img-box {
+    margin: 0 auto;
+  }
+}

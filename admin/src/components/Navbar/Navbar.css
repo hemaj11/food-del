@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 4%;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* === Brand Title === */
+.brand-title {
+  font-size: 28px;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  margin: 0;
+}
+
+.brand-title .highlight {
+  color: tomato;
+}
+
+/* === Profile Image === */
+.profile {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid tomato;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.profile:hover {
+  transform: scale(1.05);
+}
